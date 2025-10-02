@@ -1,0 +1,272 @@
+好的，我将根据你提供的参考内容，为你生成一个基于 Vue3 + Java + MySQL 的大学生寝室管理系统策划书。
+
+# 大学生寝室管理系统策划书
+
+## 一、项目概述
+
+**项目名称**：大学生寝室管理系统
+
+**项目简介**：
+本系统旨在为大学生寝室提供一个便捷的卫生记录和管理平台，帮助寝室成员更好地维护寝室环境，提高生活质量。系统支持记录、查询和分析寝室卫生情况，方便寝室长和成员了解卫生状况，合理安排清洁任务。
+
+**开发背景**：
+- 大学生寝室卫生管理缺乏统一标准和记录方式
+- 手工记录容易丢失，无法进行有效统计分析
+- 缺乏公平透明的任务分配和考核机制
+
+**项目目标**：
+- 建立一个便捷的寝室卫生记录平台
+- 实现卫生记录的可视化展示和数据分析
+- 提供公平透明的任务分配机制
+- 方便寝室成员之间的沟通与协作
+
+## 二、技术栈
+
+**前端**：
+- Vue 3 (使用 Composition API)
+- Vue Router (路由管理)
+- Pinia (状态管理)
+- Axios (HTTP请求)
+- Element Plus (UI组件库)
+- ECharts (数据可视化)
+
+**后端**：
+- Java (JDK 11+)
+- Spring Boot (快速开发框架)
+- MyBatis-Plus (ORM框架)
+- Spring Security (可选，用于身份验证)
+
+**数据库**：
+- MySQL 8.0
+
+**开发工具**：
+- VS Code (前端)
+- IntelliJ IDEA (后端)
+- Postman (API测试)
+
+**部署环境**：
+- Nginx (静态资源部署)
+- Tomcat (可选，后端部署)
+- Docker (容器化部署)
+
+## 三、系统功能
+
+### 1. 用户管理
+- 用户注册与登录
+- 个人信息管理
+- 角色管理（寝室长、普通成员）
+
+### 2. 寝室管理
+- 寝室信息展示
+- 寝室成员管理（添加、删除成员）
+- 寝室公告发布
+
+### 3. 清洁记录管理
+- 添加清洁记录（包含时间、成员、标签等信息）
+- 编辑和删除清洁记录
+- 清洁记录查询（支持多条件筛选）
+- 分页展示记录
+
+### 4. 标签管理
+- 添加、编辑、删除清洁标签
+- 标签分类管理
+
+### 5. 数据分析
+- 成员清洁次数统计
+- 清洁任务完成情况分析
+- 不同类型清洁任务分布
+- 时间维度分析（按日、周、月）
+- 数据可视化展示（柱状图、饼图、折线图等）
+
+### 6. 任务分配
+- 创建清洁任务
+- 分配任务给成员
+- 任务状态跟踪
+
+## 四、数据库设计
+
+### 主要数据表：
+
+**1. 用户表 (user)**
+- id: BIGINT (主键)
+- username: VARCHAR (用户名)
+- password: VARCHAR (密码)
+- name: VARCHAR (姓名)
+- role: VARCHAR (角色)
+- create_time: DATETIME (创建时间)
+
+**2. 寝室表 (dormitory)**
+- id: BIGINT (主键)
+- name: VARCHAR (寝室名称)
+- building: VARCHAR (楼栋)
+- room_number: VARCHAR (房间号)
+
+**3. 成员表 (member)**
+- id: BIGINT (主键)
+- user_id: BIGINT (用户ID)
+- dormitory_id: BIGINT (寝室ID)
+- join_time: DATETIME (加入时间)
+
+**4. 清洁记录表 (clean_record)**
+- id: BIGINT (主键)
+- member_id: BIGINT (成员ID)
+- tag_id: BIGINT (标签ID)
+- clean_time: DATETIME (清洁时间)
+- description: VARCHAR (描述)
+- create_time: DATETIME (创建时间)
+
+**5. 标签表 (tag)**
+- id: BIGINT (主键)
+- name: VARCHAR (标签名称)
+- description: VARCHAR (描述)
+- dormitory_id: BIGINT (寝室ID)
+
+**6. 任务表 (task)**
+- id: BIGINT (主键)
+- title: VARCHAR (任务标题)
+- description: VARCHAR (任务描述)
+- member_id: BIGINT (负责人ID)
+- tag_id: BIGINT (标签ID)
+- status: VARCHAR (状态)
+- create_time: DATETIME (创建时间)
+- deadline: DATETIME (截止时间)
+
+## 五、接口设计
+
+### 用户相关接口
+- POST /api/user/register (用户注册)
+- POST /api/user/login (用户登录)
+- GET /api/user/info (获取用户信息)
+- PUT /api/user/info (更新用户信息)
+
+### 寝室相关接口
+- GET /api/dormitory (获取寝室信息)
+- POST /api/dormitory/member (添加成员)
+- DELETE /api/dormitory/member/{id} (删除成员)
+- POST /api/dormitory/announcement (发布公告)
+
+### 清洁记录相关接口
+- GET /api/clean-record (获取清洁记录)
+- POST /api/clean-record (添加清洁记录)
+- PUT /api/clean-record/{id} (更新清洁记录)
+- DELETE /api/clean-record/{id} (删除清洁记录)
+
+### 标签相关接口
+- GET /api/tag (获取标签)
+- POST /api/tag (添加标签)
+- PUT /api/tag/{id} (更新标签)
+- DELETE /api/tag/{id} (删除标签)
+
+### 数据分析相关接口
+- GET /api/analysis/member (成员清洁统计)
+- GET /api/analysis/tag (标签分布统计)
+- GET /api/analysis/time (时间维度分析)
+
+### 任务相关接口
+- GET /api/task (获取任务)
+- POST /api/task (创建任务)
+- PUT /api/task/{id} (更新任务)
+- DELETE /api/task/{id} (删除任务)
+
+## 六、页面结构设计
+
+### 主要页面：
+1. 登录/注册页
+2. 首页（显示寝室概览、最新记录等）
+3. 成员管理页
+4. 清洁记录管理页
+5. 标签管理页
+6. 数据分析页
+7. 任务管理页
+8. 个人中心页
+
+### 页面布局：
+```
+<body>
+    <header>系统标题/导航</header>
+    <section>
+        <aside>侧边导航栏</aside>
+        <main>主要内容区域</main>
+    </section>
+</body>
+```
+
+## 七、开发计划
+
+### 阶段一：需求分析与设计（1周）
+- 需求分析与确认
+- 系统架构设计
+- 数据库设计
+- UI原型设计
+
+### 阶段二：基础功能开发（3周）
+- 搭建项目框架
+- 实现用户认证功能
+- 开发寝室管理功能
+- 实现清洁记录管理功能
+- 开发标签管理功能
+
+### 阶段三：高级功能开发（2周）
+- 实现数据分析功能
+- 开发任务分配功能
+- 优化用户体验
+- 完善系统功能
+
+### 阶段四：测试与部署（1周）
+- 单元测试与集成测试
+- 性能优化
+- 系统部署
+- 用户培训
+
+## 八、部署方案
+
+1. **前端部署**：
+   - 打包生成静态文件
+   - 使用Nginx部署到服务器
+   - 配置反向代理到后端API
+
+2. **后端部署**：
+   - 打包成Jar包
+   - 使用Docker容器化部署
+   - 配置环境变量连接数据库
+
+3. **数据库部署**：
+   - 使用MySQL 8.0
+   - 配置主从复制提高性能
+   - 定期备份数据
+
+## 九、系统特点
+
+- **易用性**：界面简洁直观，操作简单
+- **跨平台**：支持PC和移动端访问
+- **数据可视化**：直观展示卫生记录和统计数据
+- **可扩展性**：系统设计灵活，便于后续功能扩展
+- **安全性**：用户认证和授权机制保护数据安全
+
+## 十、风险评估与应对措施
+
+1. **技术风险**：
+   - 风险：团队成员对部分技术栈不熟悉
+   - 应对：提前进行技术培训，建立技术文档
+
+2. **进度风险**：
+   - 风险：开发周期紧张
+   - 应对：制定详细计划，定期检查进度，及时调整
+
+3. **质量风险**：
+   - 风险：系统存在bug或性能问题
+   - 应对：加强测试环节，进行代码审查
+
+4. **维护风险**：
+   - 风险：系统部署后维护困难
+   - 应对：编写详细的部署和维护文档，建立问题反馈机制
+
+---
+
+如果你需要，我可以帮你进一步完善这个策划书，比如：
+1. 详细的UI设计稿和交互原型
+2. 完整的数据库表结构和字段说明
+3. 前后端代码的目录结构设计
+4. 更详细的API接口文档
+
+你想让我帮你扩展哪个部分呢？或者你对这个策划书有什么修改建议？

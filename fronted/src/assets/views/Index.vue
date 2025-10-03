@@ -1,0 +1,3 @@
+<template>
+    hello index
+</template>

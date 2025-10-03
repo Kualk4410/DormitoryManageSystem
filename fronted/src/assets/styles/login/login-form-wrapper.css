@@ -1,0 +1,16 @@
+.login-edit {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+}
+
+.login-btn {
+    width: 100%;
+}
+
+.login-alert {
+    width: 100%;
+    margin: 8px 0;
+}

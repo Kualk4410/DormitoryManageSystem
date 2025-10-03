@@ -1,0 +1,29 @@
+.el-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.el-container .el-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.el-container .el-main .login-card {
+    width: 99%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+    border-radius: 8px;
+}
+
+.el-container .el-main .login-card .card-title {
+    
+}
+
+.el-container .el-main .login-card .login-form-warpper {
+    
+}

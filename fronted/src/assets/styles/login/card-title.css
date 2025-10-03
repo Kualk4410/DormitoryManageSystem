@@ -1,0 +1,17 @@
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-wrapper .logo {
+    height: 3em;
+}
+
+.room-name {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: large;
+    font-weight: bold;
+}

@@ -1,0 +1,315 @@
+<div align="center" >
+    <img src="https://gitee.com/kualk/pic-go/raw/master/imgs/logo-DMS-.png" width="20%">
+    <img src="https://gitee.com/kualk/pic-go/raw/master/imgs/my-sign--.png" width="20%">
+    <h1 align="center">寝室管理系统</h1>
+    <div align="center" style="display: flex; justify-content: center; align-items: center">
+    	<img src="https://img.shields.io/badge/License-Apache2.0-green">
+    	<img src="https://img.shields.io/badge/Edition-0.1-blue">
+    	<img src="https://img.shields.io/badge/个人全栈项目-red">
+        <img src="https://img.shields.io/badge/Author-Kualk-pink">
+    </div>
+</div>
+
+
+
+## 项目介绍
+
+<div style="background-color:rgb(240, 240, 240); border-radius: 8px; padding: 10px;">
+	<span>
+        寝室管理系统是一款专为高校寝室打造的智能化管理工具，旨在解决传统寝室管理中分工模糊、统计繁琐、信息分散等问题，通过数字化手段实现寝室事务的高效协同与规范化管理，为寝室成员营造整洁、有序、便捷的居住环境。
+    </span>
+    <br>
+    <span>
+        该系统通过功能模块化设计，覆盖清洁、值日、权限、信息、数据等寝室管理全场景，不仅降低了人工管理成本，还通过数据化、智能化手段保障了管理公平性与高效性，同时整合实用信息与互动功能，提升寝室成员的居住体验与凝聚力，是高校寝室数字化管理的理想解决方案。
+    </span>
+</div>
+
+---
+
+## 核心功能
+
+<div style="background-color:rgb(240, 240, 240); border-radius: 8px; padding: 10px;">
+    <ol style="margin: 0; padding-left: 1.2em;">
+        <li>清洁管理与数据统计：自定义分类标签权重，量化成员的贡献</li>
+        <li>值日生智能管理：自动论换周期，自动化管理事务，优化平均贡献</li>
+        <li>权限与公约管理：强化寝室规则意识，养成良好的生活习惯</li>
+        <li>数据爬取与智能提醒：实时更新寝室动态开销，自动化提醒</li>
+        <li>日志与互动功能：生成标准化操作日志，便于复盘管理，积极互动改进</li>
+    </ol>
+</div>
+
+---
+
+## 用例分析
+
+**系统描述**：
+
+<div style="background-color:rgb(240, 240, 240); border-radius: 8px; padding: 10px;">
+    系统配置模块：    
+    <ol style="margin: 0; padding-left: 1.2em;">
+        <li>系统初始化配置：首次启动时完成基础参数设置（如寝室编号、成员初始人数、默认寝室长）。</li>
+        <li>环境适配性调整：适配不同设备（电脑端、移动端）的显示与操作逻辑，确保跨设备使用流畅。</li>
+        <li>系统功能说明：提供引导（如新手教程、模块功能入口说明），帮助成员快速熟悉系统用法。</li>
+    </ol>
+</div>
+
+<div style="background-color:rgb(240, 240, 240); border-radius: 8px; padding: 10px;">
+        清洁管理模块：
+    <ol style="margin: 0; padding-left: 1.2em;">
+        <li>清洁任务定义与标签管理：用 “标签” 区分不同清洁任务，支持自定义新增 / 删除标签。</li>
+        <li>清洁次数与贡献统计：按 “标签 + 权重” 计算清洁贡献分；自动统计各成员的总清洁次数、各标签任务的单独次数。</li>
+        <li>清洁数据分析：总清洁次数寝室成员排行、单个清洁任务（按标签）的成员排行；每周清洁总次数、每个清洁任务的上一次执行时间。</li>
+        <li>图片记录支持：允许上传清洁完成后的图片（如清洁前后对比图），作为清洁记录的佐证，图片与对应清洁任务 / 成员绑定。</li>
+    </ol>
+</div>
+
+<div style="background-color:rgb(240, 240, 240); border-radius: 8px; padding: 10px;">
+    值日管理模块：
+    <ol style="margin: 0; padding-left: 1.2em;">
+        <li>值日生自动轮换：支持自定义轮换规则（如按周轮换、按成员清洁贡献分排序轮换）；提前提醒下一轮值日生</li>
+        <li>值日生核心权限与任务：</li>
+        <ul style="margin: 0; padding-left: 1.2em;">
+            <li>打卡检查：每日打卡确认寝室状态</li>
+            <li>任务管理：根据成员历史清洁贡献分委派清洁任务</li>
+            <li>记录上传：拥有清洁记录（含图片）的审核与上传权限，确保清洁任务真实完成</li>
+        </ul>
+        <li>寝室记录管理：记录寝室重大事件（如设备故障、成员违规、集体活动），包含事件时间、描述、处理结果；记录公共开销，上传缴费照片。</li>
+    </ol>
+</div>
+
+<div style="background-color:rgb(240, 240, 240); border-radius: 8px; padding: 10px;">
+    公约管理模块：
+    <ol style="margin: 0; padding-left: 1.2em;">
+        <li>寝室长可根据成员提议（关联 “提议模块”）修改公约内容，修改后需同步通知（公告确认）全体成员；</li>
+        <li>仅寝室长拥有公约的创建、编辑、生效 / 废止权限；全体成员拥有公约查看权限，确保公约透明化。</li>
+    </ol>
+</div>
+
+<div style="background-color:rgb(240, 240, 240); border-radius: 8px; padding: 10px;">
+    公告管理模块：
+    <ol style="margin: 0; padding-left: 1.2em;">
+        <li>固定信息张贴：宿管阿姨电话 / 微信、辅导员电话、校医院急诊电话；校园一卡通充值链接、寝室设施保修链接、水电费查询入口；</li>
+        <li>自动爬取当日 / 次日天气，若预报降雨 / 大风，推送 “收衣服提醒” 至当日值日生；自动更新公告。</li>
+        <li>通过学校接口爬取寝室实时水电费消耗数据，同步展示 “当前余额”“本月消耗量”，余额不足时推送提醒。</li>
+    </ol>
+</div>
+
+<div style="background-color:rgb(240, 240, 240); border-radius: 8px; padding: 10px;">
+    日志管理模块：
+    <ol style="margin: 0; padding-left: 1.2em;">
+        <li>每日生成 “当日操作日志”（含清洁记录、值日打卡、开销记录）；每周生成 “每周汇总日志”（含清洁贡献排行、值日完成率、提议处理结果）；</li>
+        <li>查看完整日志（含操作人、操作时间），便于追溯问题。</li>
+    </ol>
+</div>
+
+<div style="background-color:rgb(240, 240, 240); border-radius: 8px; padding: 10px;">
+    提议管理模块：
+    <ol style="margin: 0; padding-left: 1.2em;">
+        <li>成员提交提议时需填写具体内容，提交后自动发起全体成员（匿名）投票。</li>
+    </ol>
+</div>
+
+<div style="background-color:rgb(240, 240, 240); border-radius: 8px; padding: 10px;">
+    成员管理模块：
+    <ol style="margin: 0; padding-left: 1.2em;">
+        <li>寝室长指定：初始寝室长可移交权限，或通过成员投票选举新寝室长；</li>
+        <li>权限变更：寝室长可临时授权其他成员 “代行值日任务分配”“查看完整日志” 等权限（需设置授权有效期）。值日生交换。</li>
+        <li>全体成员可查看其他成员的基础信息（避免隐私泄露，仅展示 “姓名、学号、联系方式”）；</li>
+        <li>寝室长可添加新成员（如新生入住）、编辑成员信息（学号、联系方式、专业）、删除成员（如成员搬离）</li>
+        <li>添加成员通过账号</li>
+    </ol>
+</div>
+
+---
+
+**“参与者—业务目标“表**：
+
+| 具体用户 | 代表角色（参与者） |   业务目标   |
+| :------: | :----------------: | :----------: |
+|   dsy    |        游客        | 查看清洁记录 |
+|   dsy    |        游客        | 查看寝室公约 |
+|   dsy    |        室员        | 查看清洁记录 |
+|   dsy    |        室员        | 查看寝室公约 |
+|   dsy    |        室长        | 管理寝室公约 |
+|   dsy    |        室长        | 查看清洁记录 |
+|   dsy    |       值日生       | 管理清洁记录 |
+|   dsy    |       值日生       |     值日     |
+|   dsy    |       值日生       | 查看寝室公约 |
+|   dsy    |       值日生       |   管理日志   |
+|   dsy    |       开发者       |   管理系统   |
+
+---
+
+**识别用例标准**：
+
+<div style="background-color:rgb(240, 240, 240); border-radius: 8px; padding: 10px;">
+        <ol style="margin: 0; padding-left: 1.2em;">
+            <li>完整动作序列：一系列的动作，而不是某一个具体的行为</li>
+            <li>具体业务目标：通过“老板测试”，我开发的目的就是为了xxx</li>
+            <li>成功与失败场景：这个用例可能执行成功也可能失败，处理方式不同</li>
+        </ol>
+</div>
+
+---
+
+**用例识别**：
+
+
+
+
+
+
+
+---
+
+**开发用例图**：
+
+<img src="https://gitee.com/kualk/pic-go/raw/master/imgs/image-20251003164306459.png" alt="image-20251003164306459" style="width: 80%;" />
+
+---
+
+## 系统设计
+
+### 概念类图
+
+| 类名                | 核心属性                                                     | 类间关系                                       |
+| ------------------- | ------------------------------------------------------------ | ---------------------------------------------- |
+| Visitor             |                                                              |                                                |
+| Member              | 学号、姓名、性别、床位、头像链接、权限等级                   |                                                |
+| Monitor             | 学号、姓名、性别、床位、头像链接、权限等级                   |                                                |
+| Dutier              | 学号、姓名、性别、床位、头像链接、权限等级                   |                                                |
+| Developer           |                                                              |                                                |
+|                     |                                                              |                                                |
+| 日志                | 日志 ID、操作时间、操作人、操作内容、日志类型                |                                                |
+| CleanTask           | 任务 ID、任务名称、标签、权重、上次执行时间、执行次数、执行人员 |                                                |
+| Rule                | 公约 ID、公约内容、制定人、生效时间                          |                                                |
+| Event               | 事件 ID、内容、类型、时间、记录者                            |                                                |
+| Expense             | 开销 ID、类型、金额、时间、记录者                            |                                                |
+|                     |                                                              | 与“入住记录”多对一（1学生对应1条当前入住记录） |
+| 寝室（Dorm）        | 寝室号（主键）、楼号、床位数量                               | 与“入住记录”一对多（1寝室对应多条入住记录）    |
+| 入住记录（CheckIn） | 记录ID（主键）、入住日期、退宿日期                           | 与学生/寝室多对一                              |
+|                     |                                                              |                                                |
+
+---
+
+### 对象序列图
+
+- 用例：学生提交报修
+  1. 学生（前端）→RepairController：提交报修（`submitRepair(String studentId, String dormId, String content)`）；
+  2. RepairController→RepairOrderService：创建报修单（`createOrder(RepairOrder order)`）；
+  3. RepairOrderService→RepairOrder：初始化报修单（`RepairOrder(String studentId, String dormId)`）；
+  4. RepairOrderService→Database：保存报修单（`insert(RepairOrder order)`）；
+  5. RepairController→学生（前端）：返回提交结果（`{code:200, msg:"提交成功"}`）。
+
+---
+
+### 架构设计
+
+| 架构分层   | 技术选择（个人开发推荐） | 核心职责（教材设计原则体现）                                 |
+| ---------- | ------------------------ | ------------------------------------------------------------ |
+| 表现层     | Vue3 + Element Plus      | 负责用户交互，不包含业务逻辑（高内聚）                       |
+| 业务逻辑层 | SpringBoot 2.x           | 实现核心业务（如入住登记、查寝逻辑），通过接口与前后端解耦（低耦合） |
+| 数据访问层 | MySQL 8.0                | 存储业务数据，通过ORM框架（MyBatis）与业务层解耦             |
+
+---
+
+### 数据库设计
+
+- E-R图
+- 表结构设计
+
+| 表名         | 字段名      | 类型        | 约束                  |
+| ------------ | ----------- | ----------- | --------------------- |
+| student      | student_id  | VARCHAR(20) | 主键                  |
+|              | name        | VARCHAR(20) | 非空                  |
+|              | password    | VARCHAR(50) | 非空（加密存储）      |
+| dorm         | dorm_id     | VARCHAR(10) | 主键                  |
+|              | building_no | VARCHAR(10) | 非空（楼号）          |
+|              | bed_count   | INT         | 非空（总床位）        |
+|              | used_bed    | INT         | 非空（已用床位）      |
+| repair_order | order_id    | VARCHAR(32) | 主键                  |
+|              | student_id  | VARCHAR(20) | 外键（关联student）   |
+|              | dorm_id     | VARCHAR(10) | 外键（关联dorm）      |
+|              | status      | VARCHAR(20) | 非空（待处理/已完成） |
+
+- SQL脚本：
+
+```sql
+-- 初始化管理员账号（密码：123456加密后）
+INSERT INTO admin (admin_id, name, password) 
+VALUES ('admin001', '后勤管理员', 'e10adc3949ba59abbe56e057f20f883e');
+-- 初始化寝室数据
+INSERT INTO dorm (dorm_id, building_no, bed_count, used_bed)
+VALUES ('1-101', '1号楼', 4, 0), ('1-102', '1号楼', 4, 2);
+```
+
+---
+
+## 全栈开发
+
+### 版本管理
+
+用Git做版本控制，遵循**Git-Flow简化版**（个人开发无需复杂分支）：
+
+- 主分支（main）：存放可部署的稳定代码；
+- 开发分支（dev）：日常开发分支，功能完成后合并到main；
+- 操作流程：
+  1. 初始化仓库：`git init`，关联远程仓库（Gitee/GitHub，便于备份）；
+  2. 开发新功能：`git checkout -b dev`，编码后提交（`git commit -m "完成报修提交功能"`）；
+  3. 功能测试通过后：`git checkout main` → `git merge dev`，合并到主分支。
+
+---
+
+### 编码
+
+- 前端框架
+- 后端接口
+
+---
+
+### 测试
+
+- 单元测试
+- 接口测试
+
+---
+
+## 部署发布
+
+### 配置环境
+
+---
+
+### 部署
+
+- 数据库
+- 后端
+- 前端
+
+---
+
+### 用户手册
+
+---
+
+## 说明
+
+- logo由豆包生成。
+  提示词如下：
+
+  任务：帮我生成一份**AI图片提示词**
+  提示词的要求：
+
+  - 图片为软件项目的文字logo
+  - 项目为寝室管理系统
+  - 文字logo的文字为“DMS”
+  - logo中尝试插入具有标识的元素
+  - 绿色风格
+
+- 更新选项
+  - 【数据库】
+  - 【更新】
+  - 【前端】
+  - 【后端】
+  - 【说明文件】
+  - 【忽略文件】

@@ -1,1 +1,16 @@
 - 登录账户测试（账号信息认证）
+
+- 前端
+  - vue3
+  - element-plus
+  - vue router
+  - pinia
+  - axios
+- 后端
+  - springboot
+  - mybatis
+  - shiro
+  - spring scheduled
+- 数据库
+  - mysql
+  - redis

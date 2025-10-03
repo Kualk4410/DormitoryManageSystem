@@ -1,5 +1,5 @@
 <div align="center" >
-    <img src="https://gitee.com/kualk/pic-go/raw/master/imgs/logo-DMS--.png" width="20%">
+    <img src="https://gitee.com/kualk/pic-go/raw/master/imgs/logo-DMS_.png" width="20%">
     <img src="https://gitee.com/kualk/pic-go/raw/master/imgs/my-sign--.png" width="20%">
     <div align="center" style="font-size: 40px; font-weight: bold">寝室管理系统</div>
     <div align="center" style="display: flex; justify-content: center; align-items: center">
@@ -12,12 +12,11 @@
 
 
 
+
 ## 项目介绍
 
-```
 寝室管理系统是一款专为高校寝室打造的智能化管理工具，旨在解决传统寝室管理中分工模糊、统计繁琐、信息分散等问题，通过数字化手段实现寝室事务的高效协同与规范化管理，为寝室成员营造整洁、有序、便捷的居住环境。
 该系统通过功能模块化设计，覆盖清洁、值日、权限、信息、数据等寝室管理全场景，不仅降低了人工管理成本，还通过数据化、智能化手段保障了管理公平性与高效性，同时整合实用信息与互动功能，提升寝室成员的居住体验与凝聚力，是高校寝室数字化管理的理想解决方案。
-```
 
 
 ---

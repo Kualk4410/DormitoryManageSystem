@@ -10,7 +10,7 @@ import { Icon } from 'vant';
 import 'vant/lib/index.css'; 
 import { NavBar } from 'vant';
 import { Cell, CellGroup } from 'vant';
-
+import { Image as VanImage } from 'vant';
 
 import Router from './router'
 
@@ -31,6 +31,7 @@ app.use(TabbarItem);
 app.use(Icon);
 app.use(Cell);
 app.use(CellGroup);
+app.use(VanImage);
 app.use(NavBar);
 app.mount('#app')
 

@@ -5,6 +5,8 @@ import Login from '@/views/Login.vue'
 import Page1 from '@/views/Page1.vue'
 import Page2 from '@/views/Page2.vue'
 import Home from '@/views/Home.vue'
+import Record from '@/views/Record.vue'
+import Manage from '@/views/Manage.vue'
 
 const routes = [
   {
@@ -32,6 +34,16 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home,
+  },
+  {
+    path: '/record',
+    name: 'Record',
+    component: Record,
+  },
+  {
+    path: '/manage',
+    name: 'Manage',
+    component: Manage,
   },
 ]
 

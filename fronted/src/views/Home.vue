@@ -5,8 +5,8 @@
 
     <div class="body-wrapper">
 
-      <regulation />
-
+      <card-regulation />
+      <card-latest-event />
 
     </div>
     
@@ -17,7 +17,8 @@
 <script setup>
     import MyHeader from '@/components/MyHeader.vue';
     import TabBar from '@/components/TabBar.vue';
-    import Regulation from '@/components/Regulation.vue';
+    import CardRegulation from '@/components/CardRegulation.vue';
+    import CardLatestEvent from '@/components/CardLatestEvent.vue';
 
 </script>
 
@@ -30,6 +31,7 @@
   flex-direction: column;
   align-items: center;
   padding: 16px 0;
+  gap: 16px;
 }
 
 </style>

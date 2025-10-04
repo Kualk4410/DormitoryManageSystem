@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Index from '../assets/views/Index.vue'
-import Login from '../assets/views/Login.vue'
+import Index from '@/views/Index.vue'
+import Login from '@/views/Login.vue'
+import Page1 from '@/views/Page1.vue'
+import Page2 from '@/views/Page2.vue'
+import Home from '@/views/Home.vue'
 
 const routes = [
   {
@@ -14,7 +17,22 @@ const routes = [
     name: 'Index',
     component: Index,
     meta: { requiresAuth: true } // 表示需要登录才能访问
-  }
+  },
+  {
+    path: '/page1',
+    name: 'Page1',
+    component: Page1,
+  },
+  {
+    path: '/page2',
+    name: 'Page2',
+    component: Page2,
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: Home,
+  },
 ]
 
 const router = createRouter({

@@ -1,4 +1,6 @@
-- 登录账户测试（账号信息认证）
+- 登录账户测试（JWT-token 生成）
+- 创建宿舍，邀请宿舍，加入宿舍，退出宿舍，宿舍记录
+- 寝室标题配置
 
 - 前端
   - vue3
@@ -6,11 +8,14 @@
   - vue router
   - pinia
   - axios
+  - vant
 - 后端
   - springboot
   - mybatis
   - shiro
   - spring scheduled
+  - jwt
 - 数据库
+
   - mysql
   - redis

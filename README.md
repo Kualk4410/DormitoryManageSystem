@@ -1,18 +1,22 @@
 <div align="center" >
     <img src="https://gitee.com/kualk/pic-go/raw/master/imgs/logo-DMS__.png" width="20%">
     <img src="https://gitee.com/kualk/pic-go/raw/master/imgs/my-sign--.png" width="20%">
-    <div align="center" style="font-size: 40px; font-weight: bold">寝室管理系统</div>
-    <div align="center" style="display: flex; justify-content: center; align-items: center">
-    	<img src="https://img.shields.io/badge/License-Apache2.0-green">
-    	<img src="https://img.shields.io/badge/Edition-0.1-blue">
-        <img src="https://img.shields.io/badge/Author-Kualk-pink">
-    	<img src="https://img.shields.io/badge/个人全栈项目-red">
-    </div>
+    <div align="center" style="font-size: 40px; font-weight: bold">
 </div>
 
 
 
 
+# 寝室管理系统
+
+<div style="display: flex; align-items: center">
+    	<img src="https://img.shields.io/badge/License-Apache2.0-green">
+    	<img src="https://img.shields.io/badge/Edition-0.1-blue">
+        <img src="https://img.shields.io/badge/Author-Kualk-pink">
+    	<img src="https://img.shields.io/badge/个人全栈项目-red">
+    </div>
+
+---
 
 ## 项目介绍
 

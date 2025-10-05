@@ -199,19 +199,33 @@
 - E-R图
 - 表结构设计
 
-| 表名         | 字段名      | 类型        | 约束                  |
-| ------------ | ----------- | ----------- | --------------------- |
-| student      | student_id  | VARCHAR(20) | 主键                  |
-|              | name        | VARCHAR(20) | 非空                  |
-|              | password    | VARCHAR(50) | 非空（加密存储）      |
-| dorm         | dorm_id     | VARCHAR(10) | 主键                  |
-|              | building_no | VARCHAR(10) | 非空（楼号）          |
-|              | bed_count   | INT         | 非空（总床位）        |
-|              | used_bed    | INT         | 非空（已用床位）      |
-| repair_order | order_id    | VARCHAR(32) | 主键                  |
-|              | student_id  | VARCHAR(20) | 外键（关联student）   |
-|              | dorm_id     | VARCHAR(10) | 外键（关联dorm）      |
-|              | status      | VARCHAR(20) | 非空（待处理/已完成） |
+| 表名    | 字段名       | 类型         | 约束             |
+| ------- | ------------ | ------------ | ---------------- |
+| student | student_id   | VARCHAR(20)  | 主键             |
+|         | name         | VARCHAR(20)  | 非空             |
+|         | password     | VARCHAR(255) | 非空（加密存储） |
+|         | gender       |              |                  |
+|         | avatar_url   | VARCHAR(255) |                  |
+|         | bed_position |              |                  |
+|         | role         |              |                  |
+
+| 表名 | 字段名      | 类型        | 约束             |
+| ---- | ----------- | ----------- | ---------------- |
+| dorm | dorm_id     | VARCHAR(10) | 主键             |
+|      | building_no | VARCHAR(10) | 非空（楼号）     |
+|      | bed_count   | INT         | 非空（总床位）   |
+|      | used_bed    | INT         | 非空（已用床位） |
+
+| 表名         | 字段名     | 类型        | 约束                  |
+| ------------ | ---------- | ----------- | --------------------- |
+| repair_order | order_id   | VARCHAR(32) | 主键                  |
+|              | student_id | VARCHAR(20) | 外键（关联student）   |
+|              | dorm_id    | VARCHAR(10) | 外键（关联dorm）      |
+|              | status     | VARCHAR(20) | 非空（待处理/已完成） |
+
+
+
+
 
 - SQL脚本：
 

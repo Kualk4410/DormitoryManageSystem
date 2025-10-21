@@ -6,6 +6,7 @@ body {
 
 .page {
     margin-top: 60px;
+    padding-bottom: 60px;
     width: 100vw;
     height: 100vh;
 }
